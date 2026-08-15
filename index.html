@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faculty | Skunkworks Academy</title>
+  <meta name="description" content="Skunkworks Academy faculty hub for instructors, subject-matter experts and learning delivery resources.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#03033A">
+  <link rel="canonical" href="https://faculty.skunkworksacademy.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Skunkworks Academy">
+  <meta property="og:title" content="Faculty | Skunkworks Academy">
+  <meta property="og:description" content="Faculty hub for Skunkworks Academy instructors and subject-matter experts.">
+  <meta property="og:url" content="https://faculty.skunkworksacademy.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #03033A;
+      --blue: #1E6BD0;
+      --orange: #F24208;
+      --paper: #F7F9FC;
+      --muted: #5E6577;
+      --line: #DDE3EC;
+      --white: #FFFFFF;
+      --radius: 22px;
+      --shadow: 0 20px 60px rgba(3,3,58,.10);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); }
+    main { min-height: 70vh; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(7rem, 13vw, 11rem) 1.25rem clamp(4.5rem, 8vw, 7rem);
+      background:
+        radial-gradient(circle at 86% 10%, rgba(30,107,208,.22), transparent 34%),
+        radial-gradient(circle at 8% 85%, rgba(242,66,8,.13), transparent 30%),
+        linear-gradient(135deg, #03033A 0%, #0A1551 52%, #103D7B 100%);
+      color: white;
+    }
+    .wrap { width: min(1180px, 100%); margin: 0 auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .55rem;
+      padding: .5rem .8rem; border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px; background: rgba(255,255,255,.08);
+      font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 5px rgba(242,66,8,.16); }
+    h1 { margin: 1.4rem 0 1rem; max-width: 900px; font-size: clamp(3rem, 7vw, 6.6rem); line-height: .96; letter-spacing: -.055em; }
+    .lead { max-width: 760px; margin: 0; color: rgba(255,255,255,.78); font-size: clamp(1.05rem, 2vw, 1.28rem); line-height: 1.7; }
+    .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .8rem 1rem; border-radius: 12px; text-decoration: none; font-weight: 800; transition: transform .18s ease, box-shadow .18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { background: var(--orange); color: white; box-shadow: 0 14px 32px rgba(242,66,8,.27); }
+    .button.secondary { color: white; border: 1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.07); }
+    .section { padding: clamp(3.5rem, 8vw, 6.5rem) 1.25rem; }
+    .section h2 { margin: 0 0 .8rem; font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: -.04em; }
+    .section-intro { max-width: 740px; margin: 0 0 2rem; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+    .card { min-height: 220px; padding: 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+    .card-number { display: inline-grid; place-items: center; width: 2.35rem; height: 2.35rem; margin-bottom: 1rem; border-radius: 11px; background: #EEF4FC; color: var(--blue); font-size: .9rem; font-weight: 900; }
+    .card h3 { margin: 0 0 .65rem; font-size: 1.25rem; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.65; }
+    .band { margin-top: 1.3rem; padding: 1.4rem; border-radius: var(--radius); background: var(--ink); color: white; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .band h3 { margin: 0 0 .35rem; font-size: 1.25rem; }
+    .band p { margin: 0; color: rgba(255,255,255,.72); }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+      .band { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button { transition: none; }
+    }
+  </style>
+  <script defer src="https://skunkworksacademy.com/assets/academy-navigation.js?v=2026.08.15.2" data-skunkworks-global-shell="2026.08.15.2"></script>
+</head>
+<body>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="faculty-title">
+      <div class="wrap">
+        <span class="eyebrow">Skunkworks Academy Faculty</span>
+        <h1 id="faculty-title">Expertise that turns learning into capability.</h1>
+        <p class="lead">The Faculty hub is the public entry point for Skunkworks Academy instructors and subject-matter experts. Faculty profiles and approved teaching information can be published here as the directory expands.</p>
+        <div class="actions">
+          <a class="button primary" href="https://skunkworksacademy.com/courses/">Explore courses</a>
+          <a class="button secondary" href="https://portal.skunkworksacademy.com/">Learner portal</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faculty-purpose">
+      <div class="wrap">
+        <h2 id="faculty-purpose">Faculty hub</h2>
+        <p class="section-intro">This subdomain now provides a stable, branded publishing surface for organisation faculty members while using the same global navigation and footer as the rest of Skunkworks Academy.</p>
+        <div class="grid">
+          <article class="card">
+            <span class="card-number">01</span>
+            <h3>Faculty profiles</h3>
+            <p>A consistent location for approved instructor and subject-matter expert profiles as they are published.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">02</span>
+            <h3>Learning delivery</h3>
+            <p>A public bridge between faculty expertise, Academy course offerings and learner-facing delivery platforms.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">03</span>
+            <h3>Academy standards</h3>
+            <p>The site inherits the central Academy shell so navigation, accessibility, legal links and brand presentation remain uniform.</p>
+          </article>
+        </div>
+        <div class="band">
+          <div>
+            <h3>Looking for learning opportunities?</h3>
+            <p>Browse the Academy catalogue or continue to the learner portal.</p>
+          </div>
+          <div class="actions" style="margin-top:0">
+            <a class="button primary" href="https://catalog.skunkworksacademy.com/">Course catalogue</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

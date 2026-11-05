@@ -41,9 +41,20 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          import re
           current = 'https://skunkworksacademy.com/assets/academy-navigation.js?v=2026.08.15.1'
           marker = 'data-skunkworks-global-nav="v10"'
-          pages = [p for p in Path('.').rglob('*.html') if '.git' not in p.parts]
+          # Jekyll head includes are fragments, not standalone published pages.
+          # Keep full documents under _includes subject to the same shell check.
+          pages = []
+          for path in Path('.').rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              html = path.read_text(encoding='utf-8', errors='ignore')
+              markup = re.sub(r'<!--[\s\S]*?(?:-->|$)', '', html)
+              if '_includes' in path.parts and not re.search(r'<(?:!doctype\s+html|html\b|head\b|body\b)', markup, re.I):
+                  continue
+              pages.append(path)
           if not pages:
               raise SystemExit('No publishable HTML pages found')
           missing = []
